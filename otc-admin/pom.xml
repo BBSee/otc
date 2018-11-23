@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.otc</groupId>
+		<artifactId>otc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>otc-admin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>otc-admin</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<javamelody.version>1.72.0</javamelody.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.otc</groupId>
+			<artifactId>otc-platform</artifactId>
+		</dependency>
+
+		<!--<dependency>
+			<groupId>com.exchange</groupId>
+			<artifactId>exchange-dao</artifactId>
+		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+
+		<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.lazyluke</groupId>
+			<artifactId>log4jdbc-remix</artifactId>
+			<version>0.2.7</version>
+		</dependency>
+
+		<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>2.6.9</version>
+		</dependency>
+
+		<!-- swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+		</dependency>
+		<!-- swagger end -->
+
+		<!-- javam -->
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- DB -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- druid数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
+
+		<!--  slf4j-api-->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<!-- redis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+
+		<!-- slf4j -->
+
+		<!-- servlet依赖. -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-all</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.theborakompanioni</groupId>
+			<artifactId>thymeleaf-extras-shiro</artifactId>
+			<version>
+				1.2.1
+			</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.mingsoft</groupId>
+			<artifactId>shiro-freemarker-tags</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+
+		<!-- freemarker模板引擎视图 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+		<!--</dependency>-->
+
+		<!-- 热部署，不用重启 ，这个在这里不需要-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>false</optional>
+		</dependency>
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+			<!--<scope>provided</scope>-->
+		<!--</dependency>-->
+
+
+		<!-- jsp解析器 -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<!--<scope>provided</scope>-->
+		</dependency>
+
+
+		<!--<dependency>-->
+			<!--<groupId>com.exchange</groupId>-->
+			<!--<artifactId>exchange-wallet</artifactId>-->
+			<!--<version>0.0.1-SNAPSHOT</version>-->
+		<!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.exchange</groupId>-->
+            <!--<artifactId>exchange-api</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
+
+    </dependencies>
+
+	<!--<build>-->
+		<!--<plugins>-->
+			<!--&lt;!&ndash; spring dev &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+				<!--<version>1.4.2.RELEASE</version>-->
+				<!--<configuration>-->
+					<!--<mainClass>test.Application</mainClass>-->
+				<!--</configuration>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<goals>-->
+							<!--<goal>repackage</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+				<!--<dependencies>-->
+					<!--&lt;!&ndash; spring热部署 &ndash;&gt;-->
+					<!--<dependency>-->
+						<!--<groupId>org.springframework</groupId>-->
+						<!--<artifactId>springloaded</artifactId>-->
+						<!--<version>1.2.6.RELEASE</version>-->
+					<!--</dependency>-->
+				<!--</dependencies>-->
+			<!--</plugin>-->
+			<!--&lt;!&ndash; 忽略无web.xml警告 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-war-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+		<!--<resources>-->
+			<!--&lt;!&ndash; 打包时将jsp文件拷贝到META-INF目录下 &ndash;&gt;-->
+			<!--<resource>-->
+				<!--&lt;!&ndash; 指定resources插件处理哪个目录下的资源文件 &ndash;&gt;-->
+				<!--<directory>src/main/webapp</directory>-->
+				<!--&lt;!&ndash;注意此次必须要放在此目录下才能被访问到 &ndash;&gt;-->
+				<!--<targetPath>WEB-INF</targetPath>-->
+				<!--<includes>-->
+					<!--<include>**/**</include>-->
+				<!--</includes>-->
+			<!--</resource>-->
+			<!--<resource>-->
+				<!--<directory>src/main/resources</directory>-->
+				<!--<includes>-->
+					<!--<include>**/**</include>-->
+				<!--</includes>-->
+				<!--<filtering>false</filtering>-->
+			<!--</resource>-->
+		<!--</resources>-->
+	<!--</build>-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

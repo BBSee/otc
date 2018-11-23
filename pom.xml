@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.otc</groupId>
+	<artifactId>otc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>otc</name>
+	<description>otc 外场交易</description>
+	
+	<modules>
+		<module>otc-common</module>
+		<module>otc-platform</module>
+		<module>otc-admin</module>
+		<module>otc-api</module>
+		<module>otc-coin</module>
+		<module>otc-task</module>
+		<module>otc-wallet</module>
+		<module>otc-deploy</module>
+	</modules>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<!--<version>1.4.2.RELEASE</version>-->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<jackson.version>2.8.7</jackson.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.otc</groupId>
+				<artifactId>otc-common</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.otc</groupId>
+				<artifactId>otc-platform</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<!--  slf4j-api-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.1</version>
+			</dependency>
+			<!-- slf4j -->
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>
+
+			<!-- swagger -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>2.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>2.2.2</version>
+			</dependency>
+			<!-- swagger end -->
+
+			<!-- javam -->
+			<dependency>
+				<groupId>net.bull.javamelody</groupId>
+				<artifactId>javamelody-spring-boot-starter</artifactId>
+				<version>${javamelody.version}</version>
+			</dependency>
+
+			<!-- mybatis -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>1.3.1</version>
+			</dependency>
+
+			<!-- druid数据源 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>1.1.10</version>
+			</dependency>
+
+			<!-- servlet -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!--jackson-->
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>1.9.13</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-base</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.46</version>
+			</dependency>
+
+			<!--时间解析-->
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>2.9.9</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+
+			<!--ZXING start-->
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>javase</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+			<!--zxing end-->
+
+			<!-- redis -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>2.9.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>2.8.3</version>
+			</dependency>
+
+			<!--quartz -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>2.1.7</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mongodb</groupId>
+				<artifactId>mongo-java-driver</artifactId>
+				<version>3.5.0</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+
+		<resources>
+			<resource>
+				<!-- 指定处理主资源目录  -->
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.js</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/.svn/</exclude>
+				</excludes>
+				<filtering>false</filtering>
+			</resource>
+
+			<resource>
+				<directory>src/main/resources</directory>
+				<!--<includes>
+					<include>**/*.properties</include>
+					<include>**/*.ftl</include>
+					<include>**/*.yml</include>
+					<include>**/*.css</include>
+					<include>**/*.js</include>
+					<include>**/*.eot</include>
+					<include>**/*.svg</include>
+					<include>**/*.ttf</include>
+					<include>**/*.woff</include>
+					<include>**/*.gif</include>
+					<include>**/*.png</include>
+				</includes>-->
+				<excludes>
+					<exclude>**/.svn/</exclude>
+				</excludes>
+				<!--是否对主资源目录开启资源过滤-->
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<!-- 用来处理资源文件 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<delimiters>
+						<delimiter>${*}</delimiter>
+					</delimiters>
+					<useDefaultDelimiters>false</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.4.3</version>
+				<!-- MAVEN的maven-surefire-plugin在新建JVM进程后,由于没有指定encoding,
+                    采用了OS的默认编码,导致读取UTF-8文件(测试类的sql脚本文件)时出现乱码,最终影响了TestNG的正确执行 -->
+				<configuration>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
