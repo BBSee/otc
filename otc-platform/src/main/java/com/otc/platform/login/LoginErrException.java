@@ -1,6 +1,6 @@
 package com.otc.platform.login;
 
-import com.otc.platform.response.ResponseCode;
+import com.otc.common.response.ResponseCode;
 
 public class LoginErrException extends RuntimeException {
 

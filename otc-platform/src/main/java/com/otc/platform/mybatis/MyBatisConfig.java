@@ -14,7 +14,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
  */
 @Configuration
 public class MyBatisConfig {
-  private static final String MAPPER_LOCATION = "classpath:com/exchange/**/*Mapper.xml";
+  private static final String MAPPER_LOCATION = "classpath:com/otc/**/*Mapper.xml";
 
   @Bean
   @ConfigurationProperties(prefix = "spring.datasource")

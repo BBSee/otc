@@ -2,8 +2,8 @@ package com.otc.platform.redis;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.exchange.common.StringUtils;
-import com.exchange.platform.YvanUtil;
+import com.otc.common.utils.StringUtils;
+import com.otc.platform.YvanUtil;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
@@ -68,7 +68,7 @@ public class RedisUtils {
    */
   public static Integer getInt(String key) {
     String value = stringRedisTemplate.boundValueOps(key).get();
-    if (!com.exchange.common.StringUtils.isEmpty(value)) {
+    if (!StringUtils.isEmpty(value)) {
       return Integer.valueOf(value);
     }
     return null;

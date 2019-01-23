@@ -1,5 +1,6 @@
 package com.otc.common.email;
 
+import com.otc.common.bean.CoreConfigConstant;
 import java.util.Date;
 import javax.mail.Address;
 import javax.mail.BodyPart;

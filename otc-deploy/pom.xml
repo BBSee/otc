@@ -31,7 +31,7 @@
     <profile>
       <id>api</id>
       <properties>
-        <appName>otc-api</appName>
+        <appName>otc-front-api</appName>
         <moduleName>api</moduleName>
         <appserverPort>8081</appserverPort>
         <appDebugPort>18081</appDebugPort>
@@ -75,15 +75,15 @@
       </properties>
     </profile>
 
-    <!-- task model -->
+    <!-- job model -->
     <profile>
-      <id>task</id>
+      <id>job</id>
       <properties>
-        <appName>otc-task</appName>
-        <moduleName>task</moduleName>
+        <appName>otc-job</appName>
+        <moduleName>job</moduleName>
         <appserverPort>8091</appserverPort>
         <appDebugPort>18091</appDebugPort>
-        <fileProName>application-product-task.yml</fileProName>
+        <fileProName>application-product-job.yml</fileProName>
       </properties>
     </profile>
 

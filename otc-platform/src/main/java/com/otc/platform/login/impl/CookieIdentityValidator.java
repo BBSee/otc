@@ -3,7 +3,7 @@
  */
 package com.otc.platform.login.impl;
 
-import com.otc.common.StringUtils;
+import com.otc.common.utils.StringUtils;
 import com.otc.platform.YvanUtil;
 import com.otc.platform.login.AuthenticationException;
 import com.otc.platform.login.AuthenticationProvider;

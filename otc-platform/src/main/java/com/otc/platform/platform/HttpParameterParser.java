@@ -1,6 +1,6 @@
 package com.otc.platform.platform;
 
-import com.otc.common.StringUtils;
+import com.otc.common.utils.StringUtils;
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

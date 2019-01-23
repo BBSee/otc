@@ -1,0 +1,43 @@
+spring:
+  # 表示放在classpath的i18n文件夹，文件前缀为mess
+  messages:
+    basename: language/messages
+  datasource:
+    # driverClassName: net.sf.log4jdbc.DriverSpy
+    # url: jdbc:log4jdbc:mysql://mysql.zhangzp.cn:3306/hadoop2
+    driverClassName: net.sf.log4jdbc.DriverSpy
+    url: jdbc:log4jdbc:mysql://192.168.0.241:3306/otc?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull
+    username: app
+    password: app2018
+    filters: stat
+    maxActive: 30
+    initialSize: 5
+    maxWait: 60000
+    minIdle: 5
+    maxIdle: 20
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 1200000
+  # Spring boot http编码配置(CharacterEncodingFilter)
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  ###文件上传限制
+  servlet:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 100Mb
+  ###redis配置
+  redis:
+    host: 192.168.0.226
+    port: 46379
+    password: 123456
+    maxTotal: 60000
+    maxIdle: 1000
+    maxWaitMillis: 1000
+    database: 2
+
+dubbo:
+  registry:
+    address: 47.75.124.29:80

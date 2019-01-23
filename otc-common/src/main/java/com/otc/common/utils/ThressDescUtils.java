@@ -1,7 +1,7 @@
 package com.otc.common.utils;
 
-import com.otc.common.Base64;
-import com.otc.common.MD5Utils;
+import com.otc.common.crypt.Base64;
+import com.otc.common.crypt.MD5Utils;
 import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;

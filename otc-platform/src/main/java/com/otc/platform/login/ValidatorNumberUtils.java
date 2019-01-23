@@ -3,7 +3,7 @@
  */
 package com.otc.platform.login;
 
-import com.otc.common.StringUtils;
+import com.otc.common.utils.StringUtils;
 import com.otc.platform.YvanUtil;
 import java.awt.Color;
 import java.awt.Font;
